@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+:root {
+    --VeryDarkBlueBG :                hsl(217, 54%, 11%) ;           /* (main BG) */
+    --VeryDarkBlueCard :              hsl(216, 50%, 16%);            /* (card BG) */
+    --VeryDarkBlue :                  hsl(215, 32%, 27%);            /* (line) */
+    --White:                          hsl(0, 0%, 100%);
+    --SoftBlue:                       hsl(215, 51%, 70%);
+    --CyanViewIconFrontcover:         hsla(178, 100%, 50%, 0.5);
+    --Cyan:                           hsl(178, 100%, 50%);
+
+    --Body: 'Outfit', sans-serif;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;    
+}
+body{
+    font-family: var(--Body);
+    background-color: var(--VeryDarkBlueBG);
+    font-size: 18px;
+}
+.main-container{
+    background-color: var(--VeryDarkBlueCard);
+    width: 330px;
+    height: 546px;
+    margin: 150px auto 150px;   
+    border-radius: 16px;   
+    overflow: hidden;    
+}
+.frontcover-img{
+    background-image: url(images/image-equilibrium.jpg);
+    background-size: cover;   
+    width: 280px;
+    height: 280px;    
+    border-radius: 8px;      
+    margin: 25px 25px 0 25px; 
+    overflow: hidden;
+}
+.view-icon{    
+    opacity: 0;
+    background-color: var(--CyanViewIconFrontcover);
+    width: 100%;
+    height: 100%;
+    background-image: url(images/icon-view.svg);
+    background-repeat: no-repeat;
+    background-position: center;   
+}                                                         
+.view-icon:hover{
+    opacity: 1;                                            
+    cursor: pointer;    
+}
+.container__section{
+    padding: 10px 25px;
+}
+h1{
+    color: var(--White);
+    font-size: 1.2em; 
+    font-weight: 600;
+    margin-top: 10px;
+    margin-bottom: 18px;
+}
+h1:hover{
+    cursor: pointer;
+    color: var(--Cyan);
+}
+p{
+    color: var(--SoftBlue);
+    font-size: 0.9em;
+    font-weight: 100;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    line-height: 25px;
+}
+.eth-wrap{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+    font-size: 0.8em;
+}
+.eth{
+    color: var(--Cyan);
+}
+.clock{
+    color: var(--SoftBlue);
+}
+.line{
+    border-top: 0.05px solid var(--SoftBlue);
+    padding: 0 10px;  
+    margin: 15px auto;          
+}
+.creator-wrap{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-top: 10px;
+    gap: 15px;   
+    font-size: 0.85em;
+}
+.avatar{
+    width: 37px;
+    height: 37px;
+    border: 1px solid var(--White);
+    border-radius: 50%;
+}
+.creator-text{
+    color: var(--SoftBlue);
+}
+.name{
+    color: var(--White);
+}
+.name:hover{
+    cursor: pointer;
+    color: var(--Cyan);
+}
+/* Frontend Mentor Footer */
+.attribution{ 
+    font-size: 11px;
+    text-align: center; 
+    color: var(--White);
+}
+.attribution a{
+    color: hsl(228, 45%, 44%); 
+    text-decoration: none;
+}
+/* Large Viewport media */
+@media (min-width: 900px) {
+    .main-container{
+        width: 354px;
+        height: 600px;
+    }
+    .frontcover-img{
+        width: 305px;
+        height: 300px;
+    }
+    h1{
+        font-size: 1.3em;
+        margin: 20px 0;
+    }
+    p{
+        font-size: 1em;
+        margin: 20px 0;
+        line-height: 30px;        
+    }
+    .eth-wrap{
+        font-size: 1em;
+    }
+    .creator-wrap{
+        font-size: 1em;
+    }   
+}
